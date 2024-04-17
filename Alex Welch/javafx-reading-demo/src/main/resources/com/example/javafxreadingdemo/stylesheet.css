@@ -1,0 +1,37 @@
+
+
+/* Select all buttons and set the background color to red
+and the text color to white */
+.button {
+    -fx-background-color: #121212;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+}
+
+/* Set color of button when mouse hovers over it */
+.button:hover {
+    -fx-background-color: #2e2e2e;
+}
+
+/* Set color of node with fx:id="confirmBtn" */
+#confirmBtn {
+    -fx-background-color: #23ad56;
+}
+
+.text-field {
+    -fx-background-color: #121212;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+/* Set the root's color to lightblue */
+.root {
+    -fx-background-color: #121212;
+}
+
