@@ -18,6 +18,11 @@ public class HelloController {
     private Scene scene;
     private Parent root;
 
+    //Going to add a sidebar for buttons eventually
+    //Going to streamline this code soon too so im not repeating myself. ill probably create a function soon
+
+    //Sets up the home screen. this is called when the login button is pressed
+    //Check login-view.fxml for more details
     public void SwitchToHome(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("home-view.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -27,6 +32,9 @@ public class HelloController {
         stage.setScene(scene);
         stage.show();
     }
+
+    //Sets up the login screen. this is called when the logout button is pressed
+    //Check home-view.fxml for more details
     public void SwitchToLogin(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
