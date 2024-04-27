@@ -19,4 +19,5 @@
         <Button text="Profile" GridPane.rowIndex="2"/>
         <Button text="Logout" GridPane.rowIndex="3" fx:id="logoutButton" onAction="#SwitchToLogin"/>
     </GridPane>
+
 </VBox>
