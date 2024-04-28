@@ -19,8 +19,9 @@ public class HelloController {
     private Stage stage;
     private Parent root;
 
-    //Going to add a sidebar for buttons eventually
-    //Going to streamline this code soon too so im not repeating myself. ill probably create a function soon
+
+    //SceneLoader.LoadScene() is a base foundation for most windows. this defines the base parameters of each window.
+    //we can create more functions in the SceneLoader class to help create consistent designs across the application
 
     //Sets up the home screen. this is called when the login button is pressed
     //Check login-view.fxml for more details

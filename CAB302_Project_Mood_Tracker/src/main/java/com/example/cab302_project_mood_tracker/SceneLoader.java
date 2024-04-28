@@ -12,8 +12,12 @@ import java.io.IOException;
 public class SceneLoader {
     //Creates a scene whenever the function is run
     //Template for a consistent scene style.
-    //String : Title (Name of the scene)
+
+    //title : String - Name of the scene
+    //stage : Stage - The top level of the container
+    //root : Parent - The main scene view
     public static void LoadScene(Stage stage, Parent root, String title) throws IOException, IOException {
+        stage.hide();
         stage.setTitle(title);
 
         //Gets the screen dimensions and halves it then sets the scene to those.
@@ -25,7 +29,6 @@ public class SceneLoader {
         scene.getStylesheets().add(SceneLoader.class.getResource("styles.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
-        //stage.initStyle(StageStyle.UNIFIED);
         stage.show();
     }
 }
