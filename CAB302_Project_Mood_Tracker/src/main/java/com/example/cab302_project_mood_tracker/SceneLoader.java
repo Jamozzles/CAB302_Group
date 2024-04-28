@@ -36,6 +36,7 @@ public class SceneLoader {
         stage.setScene(scene);
         stage.setResizable(false);
 
+        //Since the style of the window has been hidden ive made it so you can drag the screen around however you want. I might change this later.
         root.setOnMousePressed(mouseEvent -> {
             xPos = mouseEvent.getSceneX();
             yPos = mouseEvent.getSceneY();
