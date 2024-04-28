@@ -8,16 +8,8 @@
 
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.HelloController">
+   <fx:include source="Header.fxml" />
    <children>
-      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #383838;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="751.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/close_FILL0_wght400_GRAD0_opsz24.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
       <AnchorPane layoutY="30.0" prefHeight="470.0" prefWidth="200.0">
          <children>
             <VBox prefHeight="470.0" prefWidth="200.0">
