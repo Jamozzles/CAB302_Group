@@ -38,7 +38,6 @@ public class HelloController {
         SceneLoader.LoadScene(stage,root, "Mood Tracker | Login");
     }
 
-
     public void  ExitApplication(){
         System.exit(0);
     }
