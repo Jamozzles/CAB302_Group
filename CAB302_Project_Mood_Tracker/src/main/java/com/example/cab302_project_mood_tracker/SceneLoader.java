@@ -1,8 +1,10 @@
 package com.example.cab302_project_mood_tracker;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -18,7 +20,8 @@ public class SceneLoader {
     //root : Parent - The main scene view
     static double xPos;
     static double yPos;
-
+    @FXML
+    private static ImageView exit;
     public static void LoadScene(Stage stage, Parent root, String title) {
         //stage.hide();
         stage.setTitle(title);

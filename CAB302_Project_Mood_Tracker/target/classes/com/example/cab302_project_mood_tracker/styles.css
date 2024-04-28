@@ -14,3 +14,21 @@
 .button:hover {
   -fx-background-color: #383838;
 }
+
+
+.exit_button {
+  -fx-background-color: #FF474C;
+  -fx-min-width: 25px;
+  -fx-min-height: 25px;
+  -fx-background-radius: 0px;
+  -fx-border-width: 1px;
+  -fx-border-color: #FF474C; /* You can adjust the color of the border */
+}
+
+.exit_button:pressed:hover {
+  -fx-background-color: #fa3c41;
+}
+
+.exit_button:hover {
+  -fx-background-color: #fa3c41;
+}

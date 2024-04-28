@@ -37,4 +37,7 @@ public class HelloController {
         root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
         SceneLoader.LoadScene(stage,root, "Mood Tracker | Login");
     }
+    public void  ExitApplication(){
+        System.exit(0);
+    }
 }
