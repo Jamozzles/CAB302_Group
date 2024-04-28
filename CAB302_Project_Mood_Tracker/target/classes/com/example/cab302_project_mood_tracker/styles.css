@@ -7,6 +7,7 @@
   -fx-background-radius: 0px;
   -fx-font-size: 15px;
 }
+
 .button:pressed:hover {
   -fx-background-color: #383838;
 }
@@ -15,20 +16,34 @@
   -fx-background-color: #383838;
 }
 
-
-.exit_button {
-  -fx-background-color: #FF474C;
+.utility_button {
+  -fx-background-color: rgba(0, 0, 0, 0.25);
   -fx-min-width: 25px;
   -fx-min-height: 25px;
-  -fx-background-radius: 0px;
-  -fx-border-width: 1px;
-  -fx-border-color: #FF474C; /* You can adjust the color of the border */
+}
+
+.utility_button:pressed:hover {
+  -fx-background-color: rgba(0, 0, 0, 0.25);
+}
+
+.utility_button:hover {
+  -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.exit_button {
+  -fx-background-color: rgba(0, 0, 0, 0.25);
+  -fx-min-width: 25px;
+  -fx-min-height: 25px;
 }
 
 .exit_button:pressed:hover {
-  -fx-background-color: #fa3c41;
+  -fx-background-color: #FF474C;
 }
 
 .exit_button:hover {
   -fx-background-color: #fa3c41;
+}
+
+.header{
+  -fx-background-color: rgba(0, 0, 0, 0.75);
 }
