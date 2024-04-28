@@ -17,7 +17,7 @@ public class SceneLoader {
     //stage : Stage - The top level of the container
     //root : Parent - The main scene view
     public static void LoadScene(Stage stage, Parent root, String title) throws IOException, IOException {
-        stage.hide();
+        //stage.hide();
         stage.setTitle(title);
 
         //Gets the screen dimensions and halves it then sets the scene to those.
