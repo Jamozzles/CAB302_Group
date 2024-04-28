@@ -17,27 +17,30 @@
 }
 
 .utility_button {
-  -fx-background-color: rgba(0, 0, 0, 0.25);
+  -fx-background-color: rgba(50, 50, 50);
   -fx-min-width: 25px;
   -fx-min-height: 25px;
 }
 
 .utility_button:pressed:hover {
-  -fx-background-color: rgba(0, 0, 0, 0.25);
+  -fx-background-color: rgba(60, 60, 60);
+  -fx-background-color: rgba(60, 60, 60);
 }
 
 .utility_button:hover {
-  -fx-background-color: rgba(0, 0, 0, 0.5);
+  -fx-background-color: rgba(65, 65, 65);
 }
 
 .exit_button {
-  -fx-background-color: rgba(0, 0, 0, 0.25);
+  -fx-background-color: rgba(50, 50, 50);
   -fx-min-width: 25px;
   -fx-min-height: 25px;
 }
 
 .exit_button:pressed:hover {
-  -fx-background-color: #FF474C;
+  -fx-background-color: #fa3c41;
+  -fx-border-color: #fa3c41;
+
 }
 
 .exit_button:hover {
@@ -45,5 +48,5 @@
 }
 
 .header{
-  -fx-background-color: rgba(0, 0, 0, 0.75);
+  -fx-background-color: rgba(50, 50, 50);
 }

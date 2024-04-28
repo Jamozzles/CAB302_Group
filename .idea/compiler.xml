@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CAB302_Project_Mood_Tracker" />
-        <module name="javafx-reading-demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javafx-reading-demo" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
