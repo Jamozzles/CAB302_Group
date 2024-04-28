@@ -16,6 +16,9 @@ public class SceneLoader {
     //title : String - Name of the scene
     //stage : Stage - The top level of the container
     //root : Parent - The main scene view
+    static double xPos;
+    static double yPos;
+
     public static void LoadScene(Stage stage, Parent root, String title) {
         //stage.hide();
         stage.setTitle(title);
@@ -29,6 +32,16 @@ public class SceneLoader {
         scene.getStylesheets().add(SceneLoader.class.getResource("styles.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
+
+        root.setOnMousePressed(mouseEvent -> {
+            xPos = mouseEvent.getSceneX();
+            yPos = mouseEvent.getSceneY();
+        });
+        root.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX() - xPos);
+            stage.setY(mouseEvent.getScreenY() - yPos);
+        });
+
         stage.show();
     }
 }
