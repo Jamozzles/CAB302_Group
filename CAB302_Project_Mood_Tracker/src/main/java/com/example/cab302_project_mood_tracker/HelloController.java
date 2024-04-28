@@ -19,7 +19,6 @@ public class HelloController {
     private Stage stage;
     private Parent root;
 
-
     //SceneLoader.LoadScene() is a base foundation for most windows. this defines the base parameters of each window.
     //we can create more functions in the SceneLoader class to help create consistent designs across the application
 
