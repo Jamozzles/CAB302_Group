@@ -38,6 +38,7 @@ public class HelloController {
         SceneLoader.LoadScene(stage,root, "Login");
     }
 
+    //utility functions
     public void  ExitApplication(){
         System.exit(0);
     }

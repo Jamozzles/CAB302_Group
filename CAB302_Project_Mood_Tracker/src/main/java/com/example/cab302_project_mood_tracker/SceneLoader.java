@@ -23,8 +23,13 @@ public class SceneLoader {
     static double yPos;
 
     public static void LoadScene(Stage stage, Parent root, String title) {
+
         String newTitle = "Mood Tracker | " + title;
         stage.setTitle(newTitle);
+        Label titleLabel = (Label) root.lookup("#applicationTitle");
+        if (titleLabel != null) {
+            titleLabel.setText(newTitle);
+        }
 
         //Gets the screen dimensions and halves it then sets the scene to those.
         //This can create a more professional feel for the application. its worth getting feedback on this.
@@ -36,12 +41,6 @@ public class SceneLoader {
         scene.getStylesheets().add(SceneLoader.class.getResource("styles.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
-
-        // Set the title on the label
-        Label titleLabel = (Label) root.lookup("#applicationTitle");
-        if (titleLabel != null) {
-            titleLabel.setText(newTitle);
-        }
 
         CheckDrag(root, stage);
 
