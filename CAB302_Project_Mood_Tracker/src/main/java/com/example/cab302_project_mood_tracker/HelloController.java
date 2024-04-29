@@ -27,7 +27,7 @@ public class HelloController {
     public void SwitchToHome(ActionEvent event) throws IOException {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("home-view.fxml"));
-        SceneLoader.LoadScene(stage,root, "Mood Tracker | Home");
+        SceneLoader.LoadScene(stage,root, "Home");
     }
 
     //Sets up the login screen. this is called when the logout button is pressed
@@ -35,7 +35,7 @@ public class HelloController {
     public void SwitchToLogin(ActionEvent event) throws IOException {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
-        SceneLoader.LoadScene(stage,root, "Mood Tracker | Login");
+        SceneLoader.LoadScene(stage,root, "Login");
     }
 
     public void  ExitApplication(){

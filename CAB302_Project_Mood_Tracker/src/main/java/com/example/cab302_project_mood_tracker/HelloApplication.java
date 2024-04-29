@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login-view.fxml")));
         stage.initStyle(StageStyle.UNDECORATED);
 
-        SceneLoader.LoadScene(stage, root, "Mood Tracker | Login");
+        SceneLoader.LoadScene(stage, root, "Login");
     }
     public static void main(String[] args) {
         launch();
