@@ -42,16 +42,29 @@ public class SceneLoader {
             titleLabel.setText(title);
         }
 
-        //Since the style of the window has been hidden ive made it so you can drag the screen around however you want. I might change this later.
+        CheckDrag(root, stage);
+
+        stage.show();
+    }
+
+    //Since the style of the window has been changed ive implemented a dragging feature.
+    static boolean dragging = false;
+    static void CheckDrag(Parent root, Stage stage){
         root.setOnMousePressed(mouseEvent -> {
             xPos = mouseEvent.getSceneX();
             yPos = mouseEvent.getSceneY();
+
+            // Check if the mouse press is within the top 30 pixels
+            dragging = mouseEvent.getSceneY() <= 30;
         });
         root.setOnMouseDragged(mouseEvent -> {
-            stage.setX(mouseEvent.getScreenX() - xPos);
-            stage.setY(mouseEvent.getScreenY() - yPos);
+            if (dragging) {
+                stage.setX(mouseEvent.getScreenX() - xPos);
+                stage.setY(mouseEvent.getScreenY() - yPos);
+            }
         });
-
-        stage.show();
+        root.setOnMouseReleased(mouseEvent -> {
+            dragging = false;
+        });
     }
 }
