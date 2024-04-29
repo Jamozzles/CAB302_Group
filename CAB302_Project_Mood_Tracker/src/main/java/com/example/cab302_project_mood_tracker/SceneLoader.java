@@ -23,7 +23,6 @@ public class SceneLoader {
     static double yPos;
 
     public static void LoadScene(Stage stage, Parent root, String title) {
-        //stage.hide();
         stage.setTitle(title);
 
         //Gets the screen dimensions and halves it then sets the scene to those.
@@ -31,6 +30,7 @@ public class SceneLoader {
         int x = (int) (Screen.getPrimary().getBounds().getMaxX() / 2);
         int y = (int) (Screen.getPrimary().getBounds().getMaxY() / 2);
 
+        //Creates new scene and sets up style sheet.
         Scene scene = new Scene(root, x, y);
         scene.getStylesheets().add(SceneLoader.class.getResource("styles.css").toExternalForm());
         stage.setScene(scene);
