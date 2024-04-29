@@ -56,6 +56,7 @@ public class SceneLoader {
 
             // Check if the mouse press is within the top 30 pixels
             dragging = mouseEvent.getSceneY() <= 30;
+            test();
         });
         root.setOnMouseDragged(mouseEvent -> {
             if (dragging) {
@@ -67,4 +68,8 @@ public class SceneLoader {
             dragging = false;
         });
     }
+    static void test(){
+        System.out.println("Dragging");
+    }
+
 }
