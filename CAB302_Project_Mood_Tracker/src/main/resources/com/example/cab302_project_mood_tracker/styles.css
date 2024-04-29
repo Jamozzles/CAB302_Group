@@ -17,7 +17,7 @@
 }
 
 .utility_button {
-  -fx-background-color: rgba(50, 50, 50);
+  -fx-background-color: rgba(50, 50, 50, 0);
   -fx-min-width: 25px;
   -fx-min-height: 25px;
 }
@@ -32,7 +32,7 @@
 }
 
 .exit_button {
-  -fx-background-color: rgba(50, 50, 50);
+  -fx-background-color: rgba(50, 50, 50, 0);
   -fx-min-width: 25px;
   -fx-min-height: 25px;
 }
@@ -48,5 +48,5 @@
 }
 
 .header{
-  -fx-background-color: rgba(50, 50, 50);
+  -fx-background-color: rgba(35, 35, 35);
 }
