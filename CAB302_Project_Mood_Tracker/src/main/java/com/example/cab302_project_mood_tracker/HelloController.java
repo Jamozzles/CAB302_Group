@@ -41,9 +41,9 @@ public class HelloController {
     public void  ExitApplication(){
         System.exit(0);
     }
-    public void  MinimiseApplication(){
-        //Not working
-        //stage.setIconified(true);
-        System.out.print("Minimising or something idk");
+
+    public void  MinimiseApplication(ActionEvent event) throws IOException{
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
     }
 }

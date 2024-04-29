@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -20,8 +21,7 @@ public class SceneLoader {
     //root : Parent - The main scene view
     static double xPos;
     static double yPos;
-    @FXML
-    private static ImageView exit;
+
     public static void LoadScene(Stage stage, Parent root, String title) {
         //stage.hide();
         stage.setTitle(title);
@@ -35,6 +35,12 @@ public class SceneLoader {
         scene.getStylesheets().add(SceneLoader.class.getResource("styles.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
+
+        // Set the title on the label
+        Label titleLabel = (Label) root.lookup("#applicationTitle");
+        if (titleLabel != null) {
+            titleLabel.setText(title);
+        }
 
         //Since the style of the window has been hidden ive made it so you can drag the screen around however you want. I might change this later.
         root.setOnMousePressed(mouseEvent -> {
