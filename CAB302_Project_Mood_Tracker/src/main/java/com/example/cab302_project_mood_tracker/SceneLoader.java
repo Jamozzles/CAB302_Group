@@ -48,6 +48,9 @@ public class SceneLoader {
     }
 
     //Since the style of the window has been changed ive implemented a dragging feature.
+    //It was referring to me as Mew for some reason. just type:
+    //git config --global user.name "Your name"
+    //To fix that issue if you have it
     static boolean dragging = false;
     static void CheckDrag(Parent root, Stage stage){
         root.setOnMousePressed(mouseEvent -> {
@@ -56,7 +59,6 @@ public class SceneLoader {
 
             // Check if the mouse press is within the top 30 pixels
             dragging = mouseEvent.getSceneY() <= 30;
-            test();
         });
         root.setOnMouseDragged(mouseEvent -> {
             if (dragging) {
@@ -68,8 +70,4 @@ public class SceneLoader {
             dragging = false;
         });
     }
-    static void test(){
-        System.out.println("Dragging");
-    }
-
 }
