@@ -1,63 +1,50 @@
 package com.example.cab302_project_mood_tracker;
 
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
-import java.io.IOException;
+public final class SceneLoader {
+    private static double xPos;
+    private static double yPos;
 
-public class SceneLoader {
-    //Creates a scene whenever the function is run
-    //Template for a consistent scene style.
-
-    //title : String - Name of the scene
-    //stage : Stage - The top level of the container
-    //root : Parent - The main scene view
-    static double xPos;
-    static double yPos;
+    private SceneLoader() {
+        // Private constructor to prevent instantiation
+    }
 
     public static void LoadScene(Stage stage, Parent root, String title) {
-
         String newTitle = "Mood Tracker | " + title;
         stage.setTitle(newTitle);
-        Label titleLabel = (Label) root.lookup("#applicationTitle");
-        if (titleLabel != null) {
-            titleLabel.setText(newTitle);
+        if (root.lookup("#applicationTitle") != null) {
+            ((Label) root.lookup("#applicationTitle")).setText(newTitle);
         }
 
-        //Gets the screen dimensions and halves it then sets the scene to those.
-        //This can create a more professional feel for the application. its worth getting feedback on this.
         int x = (int) (Screen.getPrimary().getBounds().getMaxX() / 2);
         int y = (int) (Screen.getPrimary().getBounds().getMaxY() / 2);
 
-        //Creates new scene and sets up style sheet.
-        Scene scene = new Scene(root, x, y);
+        Scene scene = new Scene(root, 800, 500);
         scene.getStylesheets().add(SceneLoader.class.getResource("styles.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
 
         CheckDrag(root, stage);
-
+        addDividerListener(root);
         stage.show();
     }
-
-    //Since the style of the window has been changed ive implemented a dragging feature.
-    //It was referring to me as Mew for some reason. just type:
-    //git config --global user.name "Your name"
-    //To fix that issue if you have it
-    static boolean dragging = false;
-    static void CheckDrag(Parent root, Stage stage){
+    private static boolean dragging = false;
+    private static void CheckDrag(Parent root, Stage stage) {
         root.setOnMousePressed(mouseEvent -> {
             xPos = mouseEvent.getSceneX();
             yPos = mouseEvent.getSceneY();
-
-            // Check if the mouse press is within the top 30 pixels
             dragging = mouseEvent.getSceneY() <= 30;
         });
         root.setOnMouseDragged(mouseEvent -> {
@@ -66,8 +53,47 @@ public class SceneLoader {
                 stage.setY(mouseEvent.getScreenY() - yPos);
             }
         });
-        root.setOnMouseReleased(mouseEvent -> {
-            dragging = false;
-        });
+        root.setOnMouseReleased(mouseEvent -> dragging = false);
+    }
+
+    private static boolean splitPaneOpen = true;
+    private static boolean splitPaneMoving = true;
+
+    private static double openDividerPos = 0.195;
+    private static double closedDividerPos = 0.0825;
+    public static void animateDivider(Parent root) {
+        if (root.lookup("#MainSplitPane") != null) {
+            SplitPane splitPane = ((SplitPane) root.lookup("#MainSplitPane"));
+            double target = splitPaneOpen ? closedDividerPos : openDividerPos;
+            splitPaneMoving = true;
+            Timeline timeline = new Timeline();
+            KeyValue keyValue = new KeyValue(splitPane.getDividers().get(0).positionProperty(), target);
+            KeyFrame keyFrame = new KeyFrame(Duration.millis(100), keyValue); // Adjust duration as needed
+            timeline.getKeyFrames().add(keyFrame);
+            timeline.play();
+
+            timeline.setOnFinished(event -> {
+                splitPaneOpen = !splitPaneOpen;
+                splitPaneMoving = false;
+            });
+        }
+    }
+    public static void addDividerListener(Parent root) {
+        if (root.lookup("#MainSplitPane") != null) {
+            SplitPane splitPane = ((SplitPane) root.lookup("#MainSplitPane"));
+            splitPane.getDividers().get(0).positionProperty().addListener(new ChangeListener<Number>() {
+                @Override
+                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                    // Handle divider position change here
+                    if (!splitPaneMoving) {
+                        if (splitPaneOpen) {
+                            splitPane.setDividerPosition(0, openDividerPos);
+                        } else {
+                            splitPane.setDividerPosition(0, closedDividerPos);
+                        }
+                    }
+                }
+            });
+        }
     }
 }

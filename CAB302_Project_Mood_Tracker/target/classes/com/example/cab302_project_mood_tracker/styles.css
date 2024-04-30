@@ -1,23 +1,22 @@
 .button {
-  -fx-background-color: #04AA6D;
+  -fx-background-color: rgba(10, 10, 10, 0);
   -fx-text-fill: white;
   -fx-font-size: 16px;
-  -fx-min-width: 100px;
-  -fx-min-height: 40px;
-  -fx-background-radius: 0px;
+  -fx-background-radius: 5px;
   -fx-font-size: 15px;
 }
 
 .button:pressed:hover {
-  -fx-background-color: #383838;
+  -fx-background-color: #58BC82;
 }
 
 .button:hover {
-  -fx-background-color: #383838;
+  -fx-background-color: #58BC82;
 }
 
 .utility_button {
   -fx-background-color: rgba(50, 50, 50, 0);
+  -fx-background-radius: 0px;
   -fx-min-width: 25px;
   -fx-min-height: 25px;
 }
@@ -33,20 +32,33 @@
 
 .exit_button {
   -fx-background-color: rgba(50, 50, 50, 0);
+  -fx-background-radius: 0px;
   -fx-min-width: 25px;
   -fx-min-height: 25px;
 }
 
 .exit_button:pressed:hover {
-  -fx-background-color: #fa3c41;
-  -fx-border-color: #fa3c41;
-
+  -fx-background-color: #F45866;
+  -fx-border-color: #F45866
 }
 
 .exit_button:hover {
-  -fx-background-color: #fa3c41;
+  -fx-background-color: #F45866;
 }
 
 .header{
-  -fx-background-color: rgba(35, 35, 35);
+  -fx-background-color: #28262C;
 }
+.background{
+  -fx-background-color: rgba(60, 60, 60);
+}
+.main-background{
+  -fx-background-color: #EFE9E7;
+}
+.split-pane-divider {
+  -fx-background-color: rgba(75, 75, 75);
+  -fx-padding: 1;
+  -fx-mouse-transparent: true;
+  -fx-cursor: default;
+}
+

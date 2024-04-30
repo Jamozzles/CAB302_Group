@@ -12,7 +12,6 @@ import java.util.Objects;
 public class HelloApplication extends Application {
     //Initialises the main scene
 
-
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login-view.fxml")));

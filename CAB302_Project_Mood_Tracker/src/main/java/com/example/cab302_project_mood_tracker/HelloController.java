@@ -47,4 +47,9 @@ public class HelloController {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.setIconified(true);
     }
+
+    public void animateDivider(ActionEvent event) throws IOException {
+        Parent currentRoot = ((Node) event.getSource()).getScene().getRoot();
+        SceneLoader.animateDivider(currentRoot);
+    }
 }
