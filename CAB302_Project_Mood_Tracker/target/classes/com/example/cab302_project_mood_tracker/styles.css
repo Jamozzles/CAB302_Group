@@ -62,3 +62,8 @@
   -fx-cursor: default;
 }
 
+.tags_button {
+  -fx-background-color: #58BC82;
+  -fx-padding: 1;
+}
+
