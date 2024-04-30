@@ -53,7 +53,7 @@ public final class SceneLoader {
     }
 
     private static boolean splitPaneOpen = true;
-    private static boolean splitPaneMoving = true;
+    private static boolean splitPaneMoving = false;
 
     private static double openDividerPos = 0.195;
     private static double closedDividerPos = 0.0825;

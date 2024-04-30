@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<!--
+Scene builder likes to change the base AnchorPane. this is here to fix it.
+<AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #383838;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.HelloController">
+-->
+
+<AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" styleClass="header" stylesheets="@styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.HelloController">
+    <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="65.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" styleClass="utility_button" stylesheets="@styles.css">
+               <graphic>
+                  <ImageView fx:id="exit1" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#ExitApplication" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Settings_Icon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D minX="1.0" minY="1.0" width="25.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#MinimiseApplication" prefHeight="32.0" prefWidth="32.0" styleClass="utility_button" stylesheets="@styles.css">
+               <graphic>
+                  <ImageView fx:id="exit11" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#ExitApplication" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Minimize_Icon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D minX="1.0" minY="1.0" width="25.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ExitApplication" prefHeight="32.0" prefWidth="32.0" styleClass="exit_button" stylesheets="@styles.css">
+               <graphic>
+                    <ImageView fx:id="exit" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#ExitApplication" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                            <Image url="@Images/Close_Icon.png" />
+                         </image>
+                     <viewport>
+                        <Rectangle2D minX="1.0" minY="1.0" width="25.0" />
+                     </viewport>
+                    </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="200.0" spacing="5.0">
+         <children>
+             <Label fx:id="applicationTitle" text="Application Title" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+    </children>
+</AnchorPane>
