@@ -17,10 +17,6 @@ public final class SceneLoader {
     private static double xPos;
     private static double yPos;
 
-    private SceneLoader() {
-        // Private constructor to prevent instantiation
-    }
-
     public static void LoadScene(Stage stage, Parent root, String title) {
         String newTitle = "Mood Tracker | " + title;
         stage.setTitle(newTitle);
