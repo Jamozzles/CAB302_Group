@@ -38,6 +38,14 @@ public class HelloController {
         SceneLoader.LoadScene(stage,root, "Login");
     }
 
+    //Sets up the login screen. this is called when the logout button is pressed
+    //Check home-view.fxml for more details
+    public void SwitchToHistory(ActionEvent event) throws IOException {
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("history-view.fxml"));
+        SceneLoader.LoadScene(stage,root, "History");
+    }
+
     //utility functions
     public void  ExitApplication(){
         System.exit(0);
