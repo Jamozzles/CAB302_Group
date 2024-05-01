@@ -18,7 +18,7 @@ import java.util.Objects;
 public class LoginController {
     private Stage stage;
     private Parent root;
-
+    private SqliteAccountDAO accountDAO;
     @FXML
     private TextField firstNameTextField;
     @FXML
@@ -36,7 +36,7 @@ public class LoginController {
 
     @FXML
     public void createAccount() {
-        SqliteAccountDAO accountDAO = new SqliteAccountDAO();
+        accountDAO = new SqliteAccountDAO();
         Account account = new Account(
                 firstNameTextField.getText(),
                 lastNameTextField.getText(),
