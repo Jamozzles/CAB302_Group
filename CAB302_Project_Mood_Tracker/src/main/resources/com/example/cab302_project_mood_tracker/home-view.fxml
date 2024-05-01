@@ -2,18 +2,11 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
    <children>
@@ -40,7 +33,7 @@
                         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="196.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="tags_button" stylesheets="@styles.css" text="Mood Tracking" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="39.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="tags_button" stylesheets="@styles.css" text="Mood Journal" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="196.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="tags_button" stylesheets="@styles.css" text="Mood Data" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="tags_button" stylesheets="@styles.css" text="Mood History" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SwitchToHistory" prefHeight="150.0" prefWidth="150.0" styleClass="tags_button" stylesheets="@styles.css" text="Mood History" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
