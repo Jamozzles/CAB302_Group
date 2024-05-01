@@ -1,5 +1,4 @@
 package com.example.cab302_project_mood_tracker.Controllers;
-
 import com.example.cab302_project_mood_tracker.HelloApplication;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -10,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 

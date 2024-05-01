@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
     <fx:include source="header-view.fxml" />
 
     <Label fx:id="Login" />

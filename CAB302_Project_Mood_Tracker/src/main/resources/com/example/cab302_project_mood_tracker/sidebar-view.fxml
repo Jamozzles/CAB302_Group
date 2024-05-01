@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane layoutX="5.0" layoutY="5.0" prefHeight="504.0" prefWidth="145.0" styleClass="Sidebar" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">    <top>
+<BorderPane layoutX="5.0" layoutY="5.0" prefHeight="504.0" prefWidth="145.0" styleClass="Sidebar" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">    <top>
         <VBox prefHeight="460.0" prefWidth="145.0" spacing="2.0" BorderPane.alignment="CENTER">
             <children>
                 <Button contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#animateDivider" prefHeight="50.0" prefWidth="50.0" stylesheets="@styles.css">
@@ -21,7 +21,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" stylesheets="@styles.css">
+                <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#SwitchToHome" prefHeight="50.0" prefWidth="150.0" stylesheets="@styles.css">
                     <graphic>
                         <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="140.0" spacing="15.0">
                             <children>

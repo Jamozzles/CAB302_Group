@@ -32,18 +32,17 @@ public class HelloController {
         root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("login-view.fxml")));
         GlobalController.loadScene(stage,root, "Login");
     }
+
     public void  SwitchToSignup(ActionEvent event) throws IOException{
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("signup-view.fxml")));
         GlobalController.loadScene(stage,root, "Sign up");
     }
 
-    //Sets up the login screen. this is called when the logout button is pressed
-    //Check home-view.fxml for more details
     public void SwitchToHistory(ActionEvent event) throws IOException {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("history-view.fxml"));
-        SceneLoader.LoadScene(stage,root, "History");
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("history-view.fxml")));
+        GlobalController.loadScene(stage,root, "History");
     }
 
     //utility functions

@@ -4,7 +4,6 @@ module com.example.cab302_project_mood_tracker {
     requires java.xml.crypto;
     requires java.sql;
 
-
     opens com.example.cab302_project_mood_tracker to javafx.fxml;
     exports com.example.cab302_project_mood_tracker;
     opens com.example.cab302_project_mood_tracker.Controllers to javafx.fxml;

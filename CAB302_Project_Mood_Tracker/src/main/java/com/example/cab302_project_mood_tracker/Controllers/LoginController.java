@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class LoginController {
-    private SqliteAccountDAO accountDAO;
     private Stage stage;
     private Parent root;
 
@@ -37,7 +36,7 @@ public class LoginController {
 
     @FXML
     public void createAccount() {
-        accountDAO = new SqliteAccountDAO();
+        SqliteAccountDAO accountDAO = new SqliteAccountDAO();
         Account account = new Account(
                 firstNameTextField.getText(),
                 lastNameTextField.getText(),
