@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
    <children>
       <fx:include source="header-view.fxml" />
       <SplitPane id="MainSplitPane" fx:id="MainSplitPane" dividerPositions="0.195" layoutY="80.0" prefHeight="420.0" prefWidth="800.0" styleClass="background" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
