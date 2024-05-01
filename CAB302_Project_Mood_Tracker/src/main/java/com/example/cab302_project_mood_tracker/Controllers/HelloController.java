@@ -1,41 +1,41 @@
-package com.example.cab302_project_mood_tracker;
+package com.example.cab302_project_mood_tracker.Controllers;
 
+import com.example.cab302_project_mood_tracker.HelloApplication;
+import com.example.cab302_project_mood_tracker.Model.Account;
+import com.example.cab302_project_mood_tracker.Model.SqliteAccountDAO;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-import java.io.Console;
 import java.io.IOException;
+import java.util.List;
+import java.util.Objects;
 
 public class HelloController {
     private Stage stage;
     private Parent root;
 
-    //SceneLoader.LoadScene() is a base foundation for most windows. this defines the base parameters of each window.
-    //we can create more functions in the SceneLoader class to help create consistent designs across the application
-
     //Sets up the home screen. this is called when the login button is pressed
     //Check login-view.fxml for more details
     public void SwitchToHome(ActionEvent event) throws IOException {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("home-view.fxml"));
-        SceneLoader.LoadScene(stage,root, "Home");
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("home-view.fxml")));
+        GlobalController.loadScene(stage,root, "Home");
     }
 
     //Sets up the login screen. this is called when the logout button is pressed
     //Check home-view.fxml for more details
     public void SwitchToLogin(ActionEvent event) throws IOException {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
-        SceneLoader.LoadScene(stage,root, "Login");
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("login-view.fxml")));
+        GlobalController.loadScene(stage,root, "Login");
+    }
+    public void  SwitchToSignup(ActionEvent event) throws IOException{
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("signup-view.fxml")));
+        GlobalController.loadScene(stage,root, "Sign up");
     }
 
     //utility functions
@@ -50,6 +50,6 @@ public class HelloController {
 
     public void animateDivider(ActionEvent event) throws IOException {
         Parent currentRoot = ((Node) event.getSource()).getScene().getRoot();
-        SceneLoader.animateDivider(currentRoot);
+        GlobalController.animateDivider(currentRoot);
     }
 }

@@ -11,10 +11,10 @@
 
 <!--
 Scene builder likes to change the base AnchorPane. this is here to fix it.
-<AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #383838;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.HelloController">
+<AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #383838;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
 -->
 
-<AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" styleClass="header" stylesheets="@styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.HelloController">
+<AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" styleClass="header" stylesheets="@styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cab302_project_mood_tracker.Controllers.HelloController">
     <children>
       <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="65.0" AnchorPane.rightAnchor="0.0">
          <children>
